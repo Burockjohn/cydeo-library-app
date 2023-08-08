@@ -1,4 +1,4 @@
-package com.cydeo.utilites;
+package com.cydeo.library.utilities;
 
 import org.junit.Assert;
 import org.openqa.selenium.*;
