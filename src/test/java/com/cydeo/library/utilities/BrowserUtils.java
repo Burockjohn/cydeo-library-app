@@ -156,7 +156,6 @@ public class BrowserUtils {
 
     /**
      * return a list of string from a list of elements
-     *
      * @param list of webelements
      * @return list of string
      */

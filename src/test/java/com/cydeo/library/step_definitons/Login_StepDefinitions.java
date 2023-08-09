@@ -78,7 +78,7 @@ public class Login_StepDefinitions {
 
         Assert.assertTrue(actual.contains(expected));
 
-        Driver.closeDriver();
+        
     }
 
     @Then("user should see the books")
@@ -89,18 +89,18 @@ public class Login_StepDefinitions {
 
         Assert.assertTrue(actual.contains(expected));
 
-        Driver.closeDriver();
+        
     }
 
 
     @Then("there should be {int} users")
-    public void there_should_be_users(Integer int1) {
+    public void there_should_be_users(int int1) {
         String expected = String.valueOf(int1);
         wait.until(ExpectedConditions.visibilityOf(landingPage.userNumbers));
         String actual = landingPage.userNumbers.getText();
         Assert.assertEquals(expected, actual);
 
-        Driver.closeDriver();
+        
     }
 
     @When("I login using {string} and {string}")
@@ -121,7 +121,7 @@ public class Login_StepDefinitions {
         Assert.assertEquals("Account username is not as expected!"
                 , expectedAccountUsername, actualAccountUsername);
 
-        Driver.closeDriver();
+        
     }
 
 
