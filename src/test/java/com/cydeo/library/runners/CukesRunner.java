@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/cydeo/library/step_definitons",
         dryRun = false,
-        tags = "@burakcan"
+        tags = "@bmi"
 )
 
 public class CukesRunner {
