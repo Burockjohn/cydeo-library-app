@@ -3,8 +3,10 @@ package com.cydeo.library.utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
@@ -54,6 +56,15 @@ public class Driver {
                     driverPool.set(new FirefoxDriver());
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    break;
+
+                case "headless-chrome":
+                    // WebDriverManager.chromedriver().setup();
+                    ChromeOptions option = new ChromeOptions();
+                    option.addArguments("--headless=new");
+                    driverPool.set(new ChromeDriver(option));
+                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
 
 
